@@ -22,7 +22,7 @@ const HomeView = ({ onStoreClick }) => {
 
         {/* GMG */}
         <div className="platform-card gmg" onClick={() => onStoreClick("3", "GMG")}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Green_Man_Gaming_logo_2024.svg/1024px-Green_Man_Gaming_logo_2024.svg.png" alt="GMG" />
+          <img src="https://www.cheapshark.com/img/stores/banners/3.png" alt="GMG" />
           <h3>GMG</h3>
           <p>공식 키 할인 판매</p>
         </div>
