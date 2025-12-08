@@ -1,0 +1,35 @@
+/* src/index.css - 전체 덮어쓰기 */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* 너비 제한 해제 */
+  width: 100%;
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  /* ⭐ 핵심 1: 중앙 정렬 해제 (왼쪽 위부터 시작) */
+  display: block; 
+  /* place-items: center;  <-- 이 녀석이 범인이었습니다! 삭제! */
+  
+  /* ⭐ 핵심 2: 높이를 화면 꽉 채우기 */
+  min-width: 320px;
+  min-height: 100vh;
+  
+  /* 배경색은 App.css에서 변수로 제어하므로 여기선 투명이나 기본값으로 */
+  background-color: transparent;
+}
+
+#root {
+  /* 리액트 루트도 화면 꽉 채우기 */
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,17 @@
+# .gitignore
+
+# 보안 파일 
+serviceAccountKey.json
+.env
+
+# 리엑트 파일
+node_modules/
+dist/
+build/
+.DS_Store
+
+#파이썬
+__pycache__/
+venv/
+env/
+*.pyc
