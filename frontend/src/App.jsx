@@ -97,19 +97,19 @@ function App() {
     setCurrentPage(1);
   };
 
-  // ⭐ [추가됨] 정렬 변경 핸들러
+  // 정렬 변경 핸들러
   const handleSortChange = (e) => {
     setSortOption(e.target.value);
     setCurrentPage(1); // 정렬 바꾸면 1페이지로 이동
   };
 
-  // 1. 장르 필터링
+  // 장르 필터링
   const genreFilteredGames = filteredGames.filter(game => {
     if (selectedGenre === '전체보기' || selectedGenre === 'All') return true;
     return game.genre.some(g => translateGenre(g) === selectedGenre);
   });
 
-  // ⭐ [핵심 수정] 2. 정렬 로직 적용 (필터링된 목록을 정렬)
+  // 정렬 로직 적용 (필터링된 목록을 정렬)
   const sortedGames = [...genreFilteredGames].sort((a, b) => {
     if (sortOption === 'metacritic') {
       return b.metacriticScore - a.metacriticScore; // 점수 높은순
@@ -121,7 +121,7 @@ function App() {
     return 0;
   });
 
-  // 3. 페이지네이션 (정렬된 목록을 자름)
+  // 페이지네이션
   const indexOfLastGame = currentPage * gamesPerPage;
   const indexOfFirstGame = indexOfLastGame - gamesPerPage;
   const currentGames = sortedGames.slice(indexOfFirstGame, indexOfLastGame);
